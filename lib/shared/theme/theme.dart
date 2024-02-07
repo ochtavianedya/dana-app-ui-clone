@@ -8,7 +8,7 @@ ThemeData getDefaultTheme() {
       foregroundColor: Colors.white,
     ),
     bottomNavigationBarTheme: const BottomNavigationBarThemeData(
-      selectedItemColor: Colors.white,
+      selectedItemColor: primaryColor,
     ),
     iconTheme: const IconThemeData(
       color: Colors.white,
