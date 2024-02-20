@@ -63,18 +63,42 @@ class DashboardController extends State<DashboardView> {
   List newsMenuItem = [
     {
       "image": "https://cdn-icons-png.flaticon.com/128/11170/11170872.png",
-      "label": "#Bukan Dompet Biasa",
-      "description": "Semua transaksi bisa di DANA"
+      "title": "#Bukan Dompet Biasa",
+      "subtitle": "Semua transaksi bisa di DANA"
     },
     {
       "image": "https://cdn-icons-png.flaticon.com/128/11273/11273602.png",
-      "label": "Bye Modus Penipuan",
-      "description": "Cek tips aman DANA yuk!"
+      "title": "Bye Modus Penipuan",
+      "subtitle": "Cek tips aman DANA yuk!"
     },
     {
       "image": "https://cdn-icons-png.flaticon.com/128/1493/1493574.png",
-      "label": "Serbu Diskon Lazada",
-      "description": "Pakai DANA diskon s/d 40RB!"
+      "title": "Serbu Diskon Lazada",
+      "subtitle": "Pakai DANA diskon s/d 40RB!"
+    },
+  ];
+
+  // shop
+  List shop = [
+    {
+      "name": "AM - MOJOAGUNG",
+      "distance": "2,4",
+      "rating": "3.7",
+    },
+    {
+      "name": "AM - PETERONGAN",
+      "distance": "3,0",
+      "rating": "3.6",
+    },
+    {
+      "name": "AM - SAWAHAN",
+      "distance": "1,0",
+      "rating": "3.4",
+    },
+    {
+      "name": "AM - SUMOBITO",
+      "distance": "4,0",
+      "rating": "3.4",
     },
   ];
 }

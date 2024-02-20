@@ -439,7 +439,7 @@ class DashboardView extends StatefulWidget {
                                             ' just received Mobile Credit from ',
                                       ),
                                       TextSpan(
-                                        text: 'EMoney Surprize',
+                                        text: 'DANA Surprize',
                                         style: TextStyle(
                                           fontWeight: FontWeight.bold,
                                           color: Colors.orange,
@@ -464,9 +464,9 @@ class DashboardView extends StatefulWidget {
                     */
                     Builder(builder: (context) {
                       List images = [
-                        "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
-                        "https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
-                        "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=781&q=80",
+                        "https://images.unsplash.com/photo-1607083206968-13611e3d76db?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZGlzY291bnR8ZW58MHx8MHx8fDA%3D",
+                        "https://images.unsplash.com/photo-1580828343064-fde4fc206bc6?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fHNhbGV8ZW58MHx8MHx8fDA%3D",
+                        "https://plus.unsplash.com/premium_photo-1681487557151-d15812c252ed?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8Zmxhc2glMjBzYWxlfGVufDB8fDB8fHww"
                       ];
 
                       return Column(
@@ -643,14 +643,14 @@ class DashboardView extends StatefulWidget {
                                               CrossAxisAlignment.start,
                                           children: [
                                             Text(
-                                              item["label"],
+                                              item["title"],
                                               style: const TextStyle(
                                                 fontSize: 16.0,
                                                 fontWeight: FontWeight.bold,
                                               ),
                                             ),
                                             Text(
-                                              "Diskon s/d 30%",
+                                              item["subtitle"],
                                               style: TextStyle(
                                                 fontSize: 12.0,
                                                 color: Colors.grey[600],
@@ -693,7 +693,462 @@ class DashboardView extends StatefulWidget {
                       ),
                     ),
                     const SizedBox(
-                      height: 200.0,
+                      height: 12.0,
+                    ),
+                    Container(
+                      width: MediaQuery.of(context).size.width,
+                      padding: const EdgeInsets.all(20.0),
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        boxShadow: const [
+                          BoxShadow(
+                            color: Color(0x19000000),
+                            blurRadius: 24,
+                            offset: Offset(0, 11),
+                          ),
+                        ],
+                        borderRadius: const BorderRadius.all(
+                          Radius.circular(12.0),
+                        ),
+                        border: Border.all(
+                          width: 1.0,
+                          color: Colors.grey[300]!,
+                        ),
+                      ),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Row(
+                            children: [
+                              const Expanded(
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      "Nearby",
+                                      style: TextStyle(
+                                        fontSize: 16.0,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                    Text(
+                                      "Find DANA merchant in around you",
+                                      style: TextStyle(
+                                        fontSize: 10.0,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              SizedBox(
+                                height: 30.0,
+                                child: OutlinedButton(
+                                  style: OutlinedButton.styleFrom(
+                                    foregroundColor: primaryColor,
+                                    side: const BorderSide(
+                                      color: primaryColor,
+                                    ),
+                                    shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(5.0),
+                                    ),
+                                  ),
+                                  onPressed: () {},
+                                  child: const Text(
+                                    "SEARCH",
+                                    style: TextStyle(
+                                      fontSize: 10.0,
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                          const SizedBox(
+                            height: 12.0,
+                          ),
+                          SingleChildScrollView(
+                            scrollDirection: Axis.horizontal,
+                            controller: ScrollController(),
+                            child: Row(
+                              children: List.generate(
+                                controller.shop.length,
+                                (index) {
+                                  var item = controller.shop[index];
+                                  return Container(
+                                    margin: const EdgeInsets.only(
+                                      right: 8.0,
+                                    ),
+                                    child: SizedBox(
+                                      width: 100,
+                                      child: Column(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        children: [
+                                          Container(
+                                            height: 100,
+                                            width: 100,
+                                            decoration: BoxDecoration(
+                                              borderRadius:
+                                                  const BorderRadius.all(
+                                                Radius.circular(12.0),
+                                              ),
+                                              border: Border.all(
+                                                width: 1.0,
+                                                color: Colors.grey[300]!,
+                                              ),
+                                            ),
+                                            child: Column(
+                                              children: [
+                                                Image.network(
+                                                  "https://logowik.com/content/uploads/images/alfamart6867.logowik.com.webp",
+                                                  width: 70.0,
+                                                  height: 70.0,
+                                                ),
+                                                Expanded(
+                                                  child: Container(
+                                                    width: 100,
+                                                    decoration:
+                                                        const BoxDecoration(
+                                                      color: Colors.orange,
+                                                      borderRadius:
+                                                          BorderRadius.only(
+                                                        bottomLeft:
+                                                            Radius.circular(
+                                                                10.0),
+                                                        bottomRight:
+                                                            Radius.circular(
+                                                                10.0),
+                                                      ),
+                                                    ),
+                                                    child: const Align(
+                                                      alignment:
+                                                          Alignment.center,
+                                                      child: Text(
+                                                        "DANA DEALS",
+                                                        style: TextStyle(
+                                                          fontSize: 10.0,
+                                                          fontWeight:
+                                                              FontWeight.bold,
+                                                          color: Colors.white,
+                                                        ),
+                                                      ),
+                                                    ),
+                                                  ),
+                                                ),
+                                              ],
+                                            ),
+                                          ),
+                                          const SizedBox(
+                                            height: 8.0,
+                                          ),
+                                          Row(
+                                            children: [
+                                              Expanded(
+                                                child: Container(
+                                                  height: 30,
+                                                  decoration: BoxDecoration(
+                                                    borderRadius:
+                                                        const BorderRadius.all(
+                                                      Radius.circular(12.0),
+                                                    ),
+                                                    border: Border.all(
+                                                      width: 1.0,
+                                                      color: Colors.grey[300]!,
+                                                    ),
+                                                  ),
+                                                  child: Align(
+                                                    alignment: Alignment.center,
+                                                    child: Text(
+                                                      item["distance"],
+                                                      style: const TextStyle(
+                                                        fontSize: 12.0,
+                                                      ),
+                                                    ),
+                                                  ),
+                                                ),
+                                              ),
+                                              const SizedBox(
+                                                width: 4.0,
+                                              ),
+                                              Expanded(
+                                                child: Container(
+                                                  height: 30,
+                                                  decoration: BoxDecoration(
+                                                    borderRadius:
+                                                        const BorderRadius.all(
+                                                      Radius.circular(12.0),
+                                                    ),
+                                                    border: Border.all(
+                                                      width: 1.0,
+                                                      color: Colors.grey[300]!,
+                                                    ),
+                                                  ),
+                                                  child: Row(
+                                                    mainAxisAlignment:
+                                                        MainAxisAlignment
+                                                            .center,
+                                                    children: [
+                                                      const Icon(
+                                                        Icons.star,
+                                                        size: 14.0,
+                                                        color: Colors.orange,
+                                                      ),
+                                                      const SizedBox(
+                                                        width: 2.0,
+                                                      ),
+                                                      Text(
+                                                        item["rating"],
+                                                        style: const TextStyle(
+                                                          fontSize: 12.0,
+                                                        ),
+                                                      ),
+                                                    ],
+                                                  ),
+                                                ),
+                                              ),
+                                            ],
+                                          ),
+                                          const SizedBox(
+                                            height: 8.0,
+                                          ),
+                                          SizedBox(
+                                            width: 100,
+                                            child: Column(
+                                              crossAxisAlignment:
+                                                  CrossAxisAlignment.start,
+                                              children: [
+                                                Text(
+                                                  item["name"],
+                                                  overflow:
+                                                      TextOverflow.ellipsis,
+                                                  style: const TextStyle(
+                                                    fontSize: 14.0,
+                                                    fontWeight: FontWeight.bold,
+                                                  ),
+                                                ),
+                                                const Text(
+                                                  "Grociers and Agent",
+                                                  overflow:
+                                                      TextOverflow.ellipsis,
+                                                  style: TextStyle(
+                                                    fontSize: 12.0,
+                                                    color: Colors.grey,
+                                                  ),
+                                                ),
+                                              ],
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                  );
+                                },
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 12.0,
+                    ),
+                    Container(
+                      width: MediaQuery.of(context).size.width,
+                      padding: const EdgeInsets.all(20.0),
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        boxShadow: const [
+                          BoxShadow(
+                            color: Color(0x19000000),
+                            blurRadius: 24,
+                            offset: Offset(0, 11),
+                          ),
+                        ],
+                        borderRadius: const BorderRadius.all(
+                          Radius.circular(12.0),
+                        ),
+                        border: Border.all(
+                          width: 1.0,
+                          color: Colors.grey[300]!,
+                        ),
+                      ),
+                      child: Column(
+                        children: [
+                          Row(
+                            children: [
+                              const Expanded(
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Row(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        Icon(
+                                          Icons.check_circle,
+                                          size: 32.0,
+                                          color: Colors.blue,
+                                        ),
+                                        SizedBox(
+                                          width: 4.0,
+                                        ),
+                                        Text(
+                                          "DANA\nPROTECTION",
+                                          style: TextStyle(
+                                            fontSize: 14.0,
+                                            fontWeight: FontWeight.bold,
+                                            color: Colors.grey,
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              SizedBox(
+                                height: 30.0,
+                                child: OutlinedButton(
+                                  style: OutlinedButton.styleFrom(
+                                    foregroundColor: primaryColor,
+                                    side: const BorderSide(
+                                      color: primaryColor,
+                                    ),
+                                    shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(5.0),
+                                    ),
+                                  ),
+                                  onPressed: () {},
+                                  child: const Text(
+                                    "LEARN",
+                                    style: TextStyle(
+                                      fontSize: 10.0,
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                          const SizedBox(
+                            height: 12.0,
+                          ),
+                          SizedBox(
+                            child: Column(
+                              children: [
+                                Row(
+                                  children: [
+                                    const Expanded(
+                                      child: Column(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.center,
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.center,
+                                        children: [
+                                          Row(
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.center,
+                                            children: [
+                                              Icon(
+                                                Icons.shield,
+                                                size: 24.0,
+                                                color: Colors.blue,
+                                              ),
+                                              SizedBox(
+                                                width: 4.0,
+                                              ),
+                                              Text(
+                                                "4",
+                                                style: TextStyle(
+                                                  fontSize: 18.0,
+                                                  fontWeight: FontWeight.bold,
+                                                ),
+                                              ),
+                                            ],
+                                          ),
+                                          SizedBox(
+                                            height: 4.0,
+                                          ),
+                                          Text(
+                                            "Protected Activity",
+                                            style: TextStyle(
+                                              fontSize: 14.0,
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                    const SizedBox(
+                                      width: 8.0,
+                                    ),
+                                    Expanded(
+                                      child: Column(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.center,
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.center,
+                                        children: [
+                                          Row(
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.center,
+                                            children: [
+                                              Icon(
+                                                MdiIcons.lock,
+                                                size: 24.0,
+                                                color: Colors.amber,
+                                              ),
+                                              const SizedBox(
+                                                width: 4.0,
+                                              ),
+                                              const Text(
+                                                "2",
+                                                style: TextStyle(
+                                                  fontSize: 18.0,
+                                                  fontWeight: FontWeight.bold,
+                                                ),
+                                              ),
+                                            ],
+                                          ),
+                                          const SizedBox(
+                                            height: 4.0,
+                                          ),
+                                          const Text(
+                                            "Security Recommendations",
+                                            overflow: TextOverflow.ellipsis,
+                                            style: TextStyle(
+                                              fontSize: 14.0,
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                                const SizedBox(
+                                  height: 12.0,
+                                ),
+                                RichText(
+                                  text: TextSpan(
+                                    style: DefaultTextStyle.of(context).style,
+                                    children: const <TextSpan>[
+                                      TextSpan(
+                                        text:
+                                            'Protect your account & transactions in the ',
+                                      ),
+                                      TextSpan(
+                                        text: 'last 0 days.',
+                                        style: TextStyle(
+                                            fontWeight: FontWeight.bold),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 80.0,
                     ),
                   ],
                 ),
