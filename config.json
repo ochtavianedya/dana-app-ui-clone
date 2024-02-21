@@ -1,7 +1,10 @@
 {
     "modules": [
         "main_navigation",
-        "dashboard"
+        "dashboard",
+        "transaction_history",
+        "transaction_history_in_progress",
+        "transaction_history_completed"
     ],
     "module_directory_name": "module",
     "experimental_mode": false,

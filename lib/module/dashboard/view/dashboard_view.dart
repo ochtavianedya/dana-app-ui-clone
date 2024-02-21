@@ -987,7 +987,7 @@ class DashboardView extends StatefulWidget {
                                         Icon(
                                           Icons.check_circle,
                                           size: 32.0,
-                                          color: Colors.blue,
+                                          color: primaryColor,
                                         ),
                                         SizedBox(
                                           width: 4.0,
@@ -1050,7 +1050,7 @@ class DashboardView extends StatefulWidget {
                                               Icon(
                                                 Icons.shield,
                                                 size: 24.0,
-                                                color: Colors.blue,
+                                                color: primaryColor,
                                               ),
                                               SizedBox(
                                                 width: 4.0,

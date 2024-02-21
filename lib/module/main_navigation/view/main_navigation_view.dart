@@ -24,9 +24,7 @@ class MainNavigationView extends StatefulWidget {
           index: controller.selectedIndex,
           children: [
             const DashboardView(),
-            Container(
-              color: Colors.green,
-            ),
+            const TransactionHistoryView(),
             Container(
               color: Colors.green,
             ),
