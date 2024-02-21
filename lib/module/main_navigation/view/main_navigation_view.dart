@@ -28,9 +28,7 @@ class MainNavigationView extends StatefulWidget {
             Container(
               color: Colors.green,
             ),
-            Container(
-              color: Colors.blue,
-            ),
+            const WalletView(),
             Container(
               color: Colors.purple,
             ),

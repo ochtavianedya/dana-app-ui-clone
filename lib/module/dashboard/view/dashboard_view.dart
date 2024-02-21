@@ -81,7 +81,10 @@ class DashboardView extends StatefulWidget {
                       child: Column(
                         children: [
                           Container(
-                            height: 40,
+                            padding: const EdgeInsets.symmetric(
+                              horizontal: 12.0,
+                              vertical: 12.0,
+                            ),
                             decoration: BoxDecoration(
                               color: Colors.white,
                               borderRadius: BorderRadius.circular(8.0),
@@ -93,24 +96,27 @@ class DashboardView extends StatefulWidget {
                                 ),
                               ],
                             ),
-                            child: TextField(
-                              decoration: InputDecoration(
-                                hintText: 'Looking for something?',
-                                hintStyle: TextStyle(
-                                  fontSize: 12.0,
+                            child: Row(
+                              children: [
+                                Icon(
+                                  Icons.search,
+                                  size: 24.0,
                                   color: Colors.grey[400],
                                 ),
-                                enabledBorder: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(6.0),
-                                  borderSide: BorderSide(
-                                    color: Colors.grey[300]!,
+                                const SizedBox(
+                                  width: 8.0,
+                                ),
+                                Expanded(
+                                  child: TextField(
+                                    decoration: InputDecoration.collapsed(
+                                      hintText: "Looking for something?",
+                                      hintStyle: TextStyle(
+                                        color: Colors.grey[400],
+                                      ),
+                                    ),
                                   ),
                                 ),
-                                prefixIcon: Icon(
-                                  Icons.search,
-                                  color: Colors.grey[400],
-                                ),
-                              ),
+                              ],
                             ),
                           ),
                         ],

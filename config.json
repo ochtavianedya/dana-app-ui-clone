@@ -4,7 +4,8 @@
         "dashboard",
         "transaction_history",
         "transaction_history_in_progress",
-        "transaction_history_completed"
+        "transaction_history_completed",
+        "wallet"
     ],
     "module_directory_name": "module",
     "experimental_mode": false,
