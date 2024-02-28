@@ -324,10 +324,10 @@ class ProfilePersonalView extends StatefulWidget {
                                     child: Row(
                                       children: [
                                         const CircleAvatar(
-                                          backgroundColor: Color(0xffdef8eb),
+                                          backgroundColor: Color(0xff3ec17d),
                                           child: Icon(
-                                            Icons.arrow_upward,
-                                            color: Color(0xff3ec17d),
+                                            Icons.arrow_downward,
+                                            color: Colors.white,
                                           ),
                                         ),
                                         const SizedBox(
@@ -365,10 +365,10 @@ class ProfilePersonalView extends StatefulWidget {
                                     child: Row(
                                       children: [
                                         const CircleAvatar(
-                                          backgroundColor: Color(0xfffee2e2),
+                                          backgroundColor: Color(0xffdd932d),
                                           child: Icon(
-                                            Icons.arrow_downward,
-                                            color: Color(0xffdd932d),
+                                            Icons.arrow_upward,
+                                            color: Colors.white,
                                           ),
                                         ),
                                         const SizedBox(
