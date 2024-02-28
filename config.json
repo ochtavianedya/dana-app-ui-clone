@@ -5,7 +5,10 @@
         "transaction_history",
         "transaction_history_in_progress",
         "transaction_history_completed",
-        "wallet"
+        "wallet",
+        "profile",
+        "profile_personal",
+        "profile_business"
     ],
     "module_directory_name": "module",
     "experimental_mode": false,

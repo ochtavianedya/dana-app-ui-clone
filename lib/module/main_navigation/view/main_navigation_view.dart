@@ -29,9 +29,7 @@ class MainNavigationView extends StatefulWidget {
               color: Colors.green,
             ),
             const WalletView(),
-            Container(
-              color: Colors.purple,
-            ),
+            const ProfileView(),
           ],
         ),
         floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,

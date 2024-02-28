@@ -7,6 +7,12 @@ export 'package:dana_app_ui_clone/module/dashboard/controller/dashboard_controll
 export 'package:dana_app_ui_clone/module/dashboard/view/dashboard_view.dart';
 export 'package:dana_app_ui_clone/module/main_navigation/controller/main_navigation_controller.dart';
 export 'package:dana_app_ui_clone/module/main_navigation/view/main_navigation_view.dart';
+export 'package:dana_app_ui_clone/module/profile/controller/profile_controller.dart';
+export 'package:dana_app_ui_clone/module/profile/view/profile_view.dart';
+export 'package:dana_app_ui_clone/module/profile_business/controller/profile_business_controller.dart';
+export 'package:dana_app_ui_clone/module/profile_business/view/profile_business_view.dart';
+export 'package:dana_app_ui_clone/module/profile_personal/controller/profile_personal_controller.dart';
+export 'package:dana_app_ui_clone/module/profile_personal/view/profile_personal_view.dart';
 export 'package:dana_app_ui_clone/module/transaction_history/controller/transaction_history_controller.dart';
 export 'package:dana_app_ui_clone/module/transaction_history/view/transaction_history_view.dart';
 export 'package:dana_app_ui_clone/module/transaction_history_completed/controller/transaction_history_completed_controller.dart';
