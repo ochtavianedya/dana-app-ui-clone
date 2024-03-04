@@ -8,7 +8,8 @@
         "wallet",
         "profile",
         "profile_personal",
-        "profile_business"
+        "profile_business",
+        "topup"
     ],
     "module_directory_name": "module",
     "experimental_mode": false,

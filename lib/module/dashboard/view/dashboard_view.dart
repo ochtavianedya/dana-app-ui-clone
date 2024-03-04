@@ -1,7 +1,7 @@
+import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:dana_app_ui_clone/core.dart';
-import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import '../controller/dashboard_controller.dart';
 
 class DashboardView extends StatefulWidget {
@@ -149,24 +149,27 @@ class DashboardView extends StatefulWidget {
                           ),
                         ),
                         Expanded(
-                          child: Column(
-                            children: [
-                              Icon(
-                                MdiIcons.walletPlusOutline,
-                                size: 36.0,
-                                color: Colors.white,
-                              ),
-                              const SizedBox(
-                                height: 6.0,
-                              ),
-                              const Text(
-                                "Top up",
-                                style: TextStyle(
-                                  fontSize: 12.0,
+                          child: InkWell(
+                            onTap: () => Get.to(const TopupView()),
+                            child: Column(
+                              children: [
+                                Icon(
+                                  MdiIcons.walletPlusOutline,
+                                  size: 36.0,
                                   color: Colors.white,
                                 ),
-                              ),
-                            ],
+                                const SizedBox(
+                                  height: 6.0,
+                                ),
+                                const Text(
+                                  "Top up",
+                                  style: TextStyle(
+                                    fontSize: 12.0,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                              ],
+                            ),
                           ),
                         ),
                         const Expanded(
