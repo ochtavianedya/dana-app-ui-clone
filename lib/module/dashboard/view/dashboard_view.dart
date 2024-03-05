@@ -196,25 +196,28 @@ class DashboardView extends StatefulWidget {
                             ),
                           ),
                         ),
-                        const Expanded(
-                          child: Column(
-                            children: [
-                              Icon(
-                                Icons.wallet_membership_outlined,
-                                size: 36.0,
-                                color: Colors.white,
-                              ),
-                              SizedBox(
-                                height: 6.0,
-                              ),
-                              Text(
-                                "Request",
-                                style: TextStyle(
-                                  fontSize: 12.0,
+                        Expanded(
+                          child: InkWell(
+                            onTap: () => Get.to(const RequestMoneyView()),
+                            child: const Column(
+                              children: [
+                                Icon(
+                                  Icons.wallet_membership_outlined,
+                                  size: 36.0,
                                   color: Colors.white,
                                 ),
-                              ),
-                            ],
+                                SizedBox(
+                                  height: 6.0,
+                                ),
+                                Text(
+                                  "Request",
+                                  style: TextStyle(
+                                    fontSize: 12.0,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                              ],
+                            ),
                           ),
                         ),
                       ],

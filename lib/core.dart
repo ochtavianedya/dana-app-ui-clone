@@ -13,6 +13,8 @@ export 'package:dana_app_ui_clone/module/profile_business/controller/profile_bus
 export 'package:dana_app_ui_clone/module/profile_business/view/profile_business_view.dart';
 export 'package:dana_app_ui_clone/module/profile_personal/controller/profile_personal_controller.dart';
 export 'package:dana_app_ui_clone/module/profile_personal/view/profile_personal_view.dart';
+export 'package:dana_app_ui_clone/module/request_money/controller/request_money_controller.dart';
+export 'package:dana_app_ui_clone/module/request_money/view/request_money_view.dart';
 export 'package:dana_app_ui_clone/module/send_money/controller/send_money_controller.dart';
 export 'package:dana_app_ui_clone/module/send_money/view/send_money_view.dart';
 export 'package:dana_app_ui_clone/module/topup/controller/topup_controller.dart';
