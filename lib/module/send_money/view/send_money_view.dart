@@ -121,89 +121,43 @@ class SendMoneyView extends StatefulWidget {
                                 const SizedBox(
                                   height: 12.0,
                                 ),
-                                Builder(builder: (context) {
-                                  List quickSend = [
-                                    {
-                                      "image":
-                                          "https://i.ibb.co/PGv8ZzG/me.jpg",
-                                      "name": "Ochtavian"
-                                    },
-                                    {
-                                      "image":
-                                          "https://images.unsplash.com/photo-1500048993953-d23a436266cf?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fHBlcnNvbnxlbnwwfHwwfHx8MA%3D%3D",
-                                      "name": "Rendy"
-                                    },
-                                    {
-                                      "image":
-                                          "https://images.unsplash.com/photo-1491349174775-aaafddd81942?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHBlcnNvbnxlbnwwfHwwfHx8MA%3D%3D",
-                                      "name": "Salsha"
-                                    },
-                                    {
-                                      "image":
-                                          "https://plus.unsplash.com/premium_photo-1678197937465-bdbc4ed95815?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjF8fHBlcnNvbnxlbnwwfHwwfHx8MA%3D%3D",
-                                      "name": "Jonathan"
-                                    },
-                                    {
-                                      "image":
-                                          "https://images.unsplash.com/photo-1542206395-9feb3edaa68d?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzJ8fHBlcnNvbnxlbnwwfHwwfHx8MA%3D%3D",
-                                      "name": "Melanie"
-                                    },
-                                    {
-                                      "image":
-                                          "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mzh8fHBlcnNvbnxlbnwwfHwwfHx8MA%3D%3D",
-                                      "name": "Anggi"
-                                    },
-                                    {
-                                      "image":
-                                          "https://images.unsplash.com/photo-1544723795-3fb6469f5b39?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDN8fHBlcnNvbnxlbnwwfHwwfHx8MA%3D%3D",
-                                      "name": "Jordan"
-                                    },
-                                    {
-                                      "image":
-                                          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS72TM9eGU8zvPVMA-zIKRGVO6JXaCypmFLzZazBgqkvw&s",
-                                      "name": "Ali"
-                                    },
-                                  ];
-                                  return GridView.builder(
-                                    padding: EdgeInsets.zero,
-                                    gridDelegate:
-                                        const SliverGridDelegateWithFixedCrossAxisCount(
-                                      childAspectRatio: 1.0,
-                                      crossAxisCount: 4,
-                                      mainAxisSpacing: 6,
-                                      crossAxisSpacing: 6,
-                                    ),
-                                    itemCount: quickSend.length,
-                                    shrinkWrap: true,
-                                    physics: const ScrollPhysics(),
-                                    itemBuilder:
-                                        (BuildContext context, int index) {
-                                      var item = quickSend[index];
-                                      return Container(
-                                        child: Column(
-                                          children: [
-                                            Expanded(
-                                              child: CircleAvatar(
-                                                backgroundImage: NetworkImage(
-                                                  item["image"],
-                                                ),
-                                              ),
+                                GridView.builder(
+                                  padding: EdgeInsets.zero,
+                                  gridDelegate:
+                                      const SliverGridDelegateWithFixedCrossAxisCount(
+                                    childAspectRatio: 1.0,
+                                    crossAxisCount: 4,
+                                    mainAxisSpacing: 6,
+                                    crossAxisSpacing: 6,
+                                  ),
+                                  itemCount: controller.quickSend.length,
+                                  shrinkWrap: true,
+                                  physics: const ScrollPhysics(),
+                                  itemBuilder:
+                                      (BuildContext context, int index) {
+                                    var item = controller.quickSend[index];
+                                    return Column(
+                                      children: [
+                                        Expanded(
+                                          child: CircleAvatar(
+                                            backgroundImage: NetworkImage(
+                                              item["image"],
                                             ),
-                                            const SizedBox(
-                                              height: 2.0,
-                                            ),
-                                            Text(
-                                              item["name"],
-                                              style: const TextStyle(
-                                                fontSize: 10.0,
-                                              ),
-                                            ),
-                                          ],
+                                          ),
                                         ),
-                                      );
-                                    },
-                                  );
-                                }),
+                                        const SizedBox(
+                                          height: 2.0,
+                                        ),
+                                        Text(
+                                          item["name"],
+                                          style: const TextStyle(
+                                            fontSize: 10.0,
+                                          ),
+                                        ),
+                                      ],
+                                    );
+                                  },
+                                ),
                               ],
                             ),
                           ),
@@ -249,82 +203,44 @@ class SendMoneyView extends StatefulWidget {
                       ),
                       child: Column(
                         children: [
-                          Container(
-                            child: Builder(builder: (context) {
-                              List menuIcons = [
-                                {
-                                  "icon": Icons.send,
-                                  "color": const Color(0xff01a952),
-                                  "label": "Send to\nGroup",
-                                },
-                                {
-                                  "icon": Icons.people,
-                                  "color": const Color(0xff0090f1),
-                                  "label": "Send to\nFriend",
-                                },
-                                {
-                                  "icon": MdiIcons.bank,
-                                  "color": const Color(0xffed8d17),
-                                  "label": "Send to\nBank",
-                                },
-                                {
-                                  "icon": MdiIcons.wallet,
-                                  "color": const Color(0xff3bb591),
-                                  "label": "Send to\ne-Wallet",
-                                },
-                                {
-                                  "icon": MdiIcons.cash,
-                                  "color": const Color(0xfffd1e35),
-                                  "label": "Cash\nWithdrawal",
-                                },
-                                {
-                                  "icon": Icons.wallet_giftcard,
-                                  "color": const Color(0xff0090f1),
-                                  "label": "DANA\nShocked",
-                                },
-                              ];
-                              return GridView.builder(
-                                padding: EdgeInsets.zero,
-                                gridDelegate:
-                                    const SliverGridDelegateWithFixedCrossAxisCount(
-                                  childAspectRatio: 1.0,
-                                  crossAxisCount: 3,
-                                  mainAxisSpacing: 6,
-                                  crossAxisSpacing: 6,
-                                ),
-                                itemCount: menuIcons.length,
-                                shrinkWrap: true,
-                                physics: const ScrollPhysics(),
-                                itemBuilder: (BuildContext context, int index) {
-                                  var menu = menuIcons[index];
-                                  return Container(
-                                    child: Column(
-                                      children: [
-                                        Expanded(
-                                          child: Container(
-                                            padding: const EdgeInsets.all(12.0),
-                                            child: FittedBox(
-                                              child: Icon(
-                                                menu["icon"],
-                                                color: menu["color"],
-                                              ),
-                                            ),
-                                          ),
+                          GridView.builder(
+                            padding: EdgeInsets.zero,
+                            gridDelegate:
+                                const SliverGridDelegateWithFixedCrossAxisCount(
+                              childAspectRatio: 1.0,
+                              crossAxisCount: 3,
+                              mainAxisSpacing: 6,
+                              crossAxisSpacing: 6,
+                            ),
+                            itemCount: controller.menuIcons.length,
+                            shrinkWrap: true,
+                            physics: const ScrollPhysics(),
+                            itemBuilder: (BuildContext context, int index) {
+                              var menu = controller.menuIcons[index];
+                              return Column(
+                                children: [
+                                  Expanded(
+                                    child: Container(
+                                      padding: const EdgeInsets.all(12.0),
+                                      child: FittedBox(
+                                        child: Icon(
+                                          menu["icon"],
+                                          color: menu["color"],
                                         ),
-                                        Text(
-                                          menu["label"],
-                                          textAlign: TextAlign.center,
-                                          maxLines: 2,
-                                          style: const TextStyle(
-                                            fontSize: 12.0,
-                                          ),
-                                        ),
-                                      ],
+                                      ),
                                     ),
-                                  );
-                                },
+                                  ),
+                                  Text(
+                                    menu["label"],
+                                    textAlign: TextAlign.center,
+                                    maxLines: 2,
+                                    style: const TextStyle(
+                                      fontSize: 12.0,
+                                    ),
+                                  ),
+                                ],
                               );
-                            }),
+                            },
                           ),
                           const SizedBox(
                             height: 12.0,
