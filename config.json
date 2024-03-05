@@ -9,7 +9,8 @@
         "profile",
         "profile_personal",
         "profile_business",
-        "topup"
+        "topup",
+        "send_money"
     ],
     "module_directory_name": "module",
     "experimental_mode": false,
